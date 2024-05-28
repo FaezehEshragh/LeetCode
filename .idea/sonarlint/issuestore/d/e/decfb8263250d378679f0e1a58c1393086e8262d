@@ -1,0 +1,11 @@
+
+{	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ëşŸ­ıÿÿÿÿ8È¹µÈú1
+l
+java:S2259+"JA "NullPointerException" could be thrown; "beforeMiddle" is nullable here.(êçÚõøÿÿÿÿ8ÜˆÉÈú1
+g
+java:S2259'"JA "NullPointerException" could be thrown; "beforeMiddle" is nullable here.(ĞŒ¦«8ÃÿºÈú1
+X
+java:S1854";Remove this useless assignment to local variable "updated".(¦ğÊÁ8Û¹µÈú1
+I
+java:S1481",Remove this unused "updated" local variable.(¦ğÊÁ8Ş¹µÈú1
+L	java:S106"+Replace this use of System.out by a logger.(Ÿìû‚øÿÿÿÿ8ß¹µÈú1

@@ -1,0 +1,16 @@
+
+0
+java:S1220""Move this file to a named package.
+E
+java:S6212"/Declare this local variable with "var" instead.(¥Äñ»
+S	java:S106"9Replace this use of System.out or System.err by a logger.(»„êüÿÿÿÿ
+T
+java:S1854"9Remove this useless assignment to local variable "index".(ÿ€¼Éıÿÿÿÿ
+m
+java:S3776"RRefactor this method to reduce its Cognitive Complexity from 23 to the 15 allowed.(Å²Åßøÿÿÿÿ
+E
+java:S6212"/Declare this local variable with "var" instead.(¸ô¨
+E
+java:S6212"/Declare this local variable with "var" instead.(ìüà·
+J
+java:S6212"/Declare this local variable with "var" instead.(£°çüıÿÿÿÿ

@@ -1,0 +1,16 @@
+
+7
+java:S1643"Use a StringBuilder instead.(ßòÉÑøÿÿÿÿ
+1
+java:S1643)"Use a StringBuilder instead.(€“âd
+a	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(…ÈÛ0
+0
+java:S1220""Move this file to a named package.
+@	java:S106"+Replace this use of System.out by a logger.(¢àóÄ
+E	java:S106"+Replace this use of System.out by a logger.(ŠÁ·üÿÿÿÿ
+h
+java:S3776	"RRefactor this method to reduce its Cognitive Complexity from 23 to the 15 allowed.(¼ş‡Ş
+^
+java:S1854"HRemove this useless assignment to local variable "rotationFactorletter".(ÚÆß°
+O
+java:S1481"9Remove this unused "rotationFactorletter" local variable.(ÚÆß°

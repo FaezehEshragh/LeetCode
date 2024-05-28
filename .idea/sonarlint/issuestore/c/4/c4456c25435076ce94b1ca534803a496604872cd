@@ -1,0 +1,16 @@
+
+k	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(þÍÞôÿÿÿÿÿ
+b	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(š•§Þ
+0
+java:S1220""Move this file to a named package.
+5
+java:S1659	"Declare "t" on a separate line.(êúÇç
+Q	java:S125"<This block of commented-out lines of code should be removed.(½ËÚ³
+Q	java:S125"<This block of commented-out lines of code should be removed.(½ËÚ³
+E	java:S106"+Replace this use of System.out by a logger.(æ¨¤šøÿÿÿÿ
+P	java:S1253"<This block of commented-out lines of code should be removed.(ñ×Û
+P	java:S125C"<This block of commented-out lines of code should be removed.(ñ×Û
+F
+java:S1128"+Remove this unused import 'java.util.List'.(Õë±Äøÿÿÿÿ
+N
+java:S1128",Remove this unused import 'java.util.Stack'.(ÞÈ†üúÿÿÿÿ8ÈçÏœö1

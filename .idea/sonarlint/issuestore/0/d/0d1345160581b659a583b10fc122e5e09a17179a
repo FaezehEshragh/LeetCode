@@ -1,0 +1,23 @@
+
+t
+java:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(ôŒåÂşÿÿÿÿ
+t
+java:S2293T"YReplace the type specification in this constructor call with the diamond operator ("<>").(ôŒåÂşÿÿÿÿ
+o
+java:S2293U"YReplace the type specification in this constructor call with the diamond operator ("<>").(×…›ˆ
+o
+java:S2293Y"YReplace the type specification in this constructor call with the diamond operator ("<>").(š…ª
+0
+java:S1220""Move this file to a named package.
+P
+java:S1854"5Remove this useless assignment to local variable "a".(¸†Úùÿÿÿÿ
+A
+java:S1481"&Remove this unused "a" local variable.(¸†Úùÿÿÿÿ
+E	java:S106"+Replace this use of System.out by a logger.(Ÿìû‚øÿÿÿÿ
+U
+java:S1854R":Remove this useless assignment to local variable "output".(¿®·ÿÿÿÿÿ
+V	java:S125$"<This block of commented-out lines of code should be removed.(ÛÿıÇøÿÿÿÿ
+V	java:S125("<This block of commented-out lines of code should be removed.(†Æ¥Ûúÿÿÿÿ
+V	java:S125-"<This block of commented-out lines of code should be removed.(”üï•üÿÿÿÿ
+F
+java:S1481R"+Remove this unused "output" local variable.(¿®·ÿÿÿÿÿ
