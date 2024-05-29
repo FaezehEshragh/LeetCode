@@ -4,3 +4,17 @@ An integer a is closer to x than an integer b if:
 
 |a - x| < |b - x|, or
 |a - x| == |b - x| and a < b
+
+
+
+What did I learn here:
+1- Read the problem carefully and understand the requirements. At first I didn't realize that the input is sorted. That makes a huge difference and you wouldn't need to use heap
+2- to do binary search in java you can use the built in function: Arrays.binarySearch(arr, x).
+
+ If the key is found in the array, the method returns the index of the key.
+ If the key is not found, the method returns a negative value.
+ The negative value is computed as -(insertion point) - 1, where the insertion point is the index at which the key would
+  need to be inserted to maintain the sorted order.
+  For example,if result is -3,  the insertion point is -(-3) - 1 = 2.
+
+Other implementations of binary search can return -1 if the result is not found.

@@ -1,0 +1,6 @@
+What did I learn here:
+1- for this kind of problem, use MaxHeap instead of MinHeap. This way you can compare the max element of the heap with the current element and if it is smaller, you can replace it.
+This way you can keep the heap size at k.
+2- Need to work more on defining comparator
+
+'''
