@@ -1,7 +1,6 @@
 package Mine2024.Heap.KClosestPointsToOrigin;
 
 import java.util.Comparator;
-import java.util.List;
 import java.util.PriorityQueue;
 
 public class Solution1
@@ -15,13 +14,11 @@ public class Solution1
     }
     public int[][] kClosest(int[][] points, int k) {
 
+        //minheap because of the way the comparator is defined
         PriorityQueue<int[]> closests = new PriorityQueue<>(new PointComparator());
 
         for(int[] point:points){  //O(NLogN)
             closests.add(point);
-            // if(closests.size()>k){
-            //     closests.poll();
-            // }
         }
 
         int[][] result = new int[k][2];
