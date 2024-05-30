@@ -16,13 +16,14 @@ public class Solution2  // notice that the input is a SORTED list =>//O(K)
     public static List<Integer> findClosestElements(int[] arr, int k, int x) {
 
 
+
         List result = new ArrayList<>();
-        int index = Arrays.binarySearch(arr, x);
+        int index = Arrays.binarySearch(arr, x);  //O(logn)
         int insertIndex = index<0? -index-1:index;
         int left = insertIndex-(k)>0? insertIndex-(k):0;
         int right =  insertIndex+(k) <arr.length? insertIndex+(k):arr.length-1;
 
-        while((left+k)<=right){
+        while((left+k)<=right){ //O(k)
             if(Math.abs(arr[left]-x)>Math.abs(arr[right]-x)){
                 left++;
             }else{
