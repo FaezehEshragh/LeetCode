@@ -1,5 +1,7 @@
 .idea
 .idea/sonarlint/*
 .idea/sonarlint
+out/*
+leetcode.iml
 
 
