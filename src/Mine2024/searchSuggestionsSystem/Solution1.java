@@ -7,22 +7,26 @@ import java.util.Map;
 import java.util.PriorityQueue;
 import java.util.Stack;
 
-class Solution1 {
+class Solution1
+{
 
 
-    public static void main(String[] args) {
-        String[] products = {"mobile","mouse","moneypot","monitor","mousepad"};
+    public static void main(String[] args)
+    {
+        String[] products = {"mobile", "mouse", "moneypot", "monitor", "mousepad"};
         String searchWord = "mouse";
         Solution1 s = new Solution1();
         List<List<String>> result = s.suggestedProducts(products, searchWord);
         System.out.println(result);
     }
-    public List<List<String>> suggestedProducts(String[] products, String searchWord) {
+    public List<List<String>> suggestedProducts(String[] products, String searchWord)
+    {
         char[] searchWordArray = searchWord.toCharArray();
         Trie trie = new Trie(new TrieNode(new HashMap<>(), false));
 
         // insert product data into the trie
-        for(String product:products){
+        for (String product : products)
+        {
             trie.insert(product);
         }
 
@@ -31,22 +35,23 @@ class Solution1 {
         String searchPhrase = "";
 
         // for each char in the searchWordArray, retrieve 3 words from the trie
-        for(char letter:searchWordArray){
-            searchPhrase= searchPhrase+letter;
-            List<String> partialResult= findSuggestedWordsForPhrase(searchPhrase, trie);
-             result.add(partialResult);
+        for (char letter : searchWordArray)
+        {
+            searchPhrase = searchPhrase + letter;
+            List<String> partialResult = findSuggestedWordsForPhrase(searchPhrase, trie);
+            result.add(partialResult);
         }
 
 
-return result;
+        return result;
 
     }
 
     private List<String> findSuggestedWordsForPhrase(String searchPhrase, Trie trie)
     {
         List<String> result = new ArrayList<>();
-        PriorityQueue<String> pq = new PriorityQueue<>((a, b) -> b.compareTo(a));
         Stack<TrieNode> stack = new Stack<>();
+        PriorityQueue<String> pq = new PriorityQueue<>((a, b) -> b.compareTo(a)); // so that we can get the top 3 words in alphabetical order
         TrieNode currentNode = trie.root;
         stack.push(currentNode);
         for (char letter : searchPhrase.toCharArray())
@@ -57,31 +62,33 @@ return result;
             }
             else
             {
-               return result;
+                return result;
             }
 
         }
 
         while (!stack.isEmpty())
         {
-
-            if(currentNode.isWord)
+            if (currentNode.isWord)
             {
                 pq.offer(currentNode.content);
-                if (pq.size() > 3) {
+                if (pq.size() > 3)
+                {
                     pq.poll();
                 }
             }
-           for (TrieNode node : currentNode.children.values())
-                {
-                    stack.push(node);
+            for (TrieNode node : currentNode.children.values())
+            {
+                stack.push(node);
 
-                }
+            }
 
             currentNode = stack.pop();
 
         }
-        while (!pq.isEmpty()) {
+
+        while (!pq.isEmpty())
+        {
             result.add(0, pq.poll());
         }
 
@@ -89,10 +96,9 @@ return result;
     }
 
 
-
-
-    public class TrieNode{
-        Map<Character,TrieNode> children;
+    public class TrieNode
+    {
+        Map<Character, TrieNode> children;
         String content;
         boolean isWord;
 
@@ -103,7 +109,8 @@ return result;
         }
     }
 
-    public class Trie{
+    public class Trie
+    {
         TrieNode root;
 
         public Trie(TrieNode root)
@@ -111,13 +118,15 @@ return result;
             this.root = root;
         }
 
-        public void insert(String word){
+        public void insert(String word)
+        {
             char[] wordArray = word.toCharArray();
             TrieNode currentNode = this.root;
             String currentContent = "";
 
-            for(char currentLetter:wordArray){
-                currentContent+=currentLetter;
+            for (char currentLetter : wordArray)
+            {
+                currentContent += currentLetter;
                 currentNode = currentNode.children.computeIfAbsent(currentLetter, k -> new TrieNode(new HashMap<>(), false));
                 currentNode.content = currentContent;
 //                if(currentNode.children!= null && currentNode.children.get(currentLetter)!=null){
@@ -141,17 +150,22 @@ return result;
 //                }
 
             }
-            currentNode.isWord= true;
+            currentNode.isWord = true;
 
 
         }
 
-        public boolean find(String word){
+        public boolean find(String word)
+        {
             TrieNode current = this.root;
-            for(char letter: word.toCharArray()){
-                if(current.children.containsKey(letter)){
+            for (char letter : word.toCharArray())
+            {
+                if (current.children.containsKey(letter))
+                {
                     current = current.children.get(letter);
-                } else{
+                }
+                else
+                {
                     return false;
                 }
 
