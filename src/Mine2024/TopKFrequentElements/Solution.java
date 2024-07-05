@@ -1,6 +1,5 @@
 package Mine2024.TopKFrequentElements;
 
-import java.security.Key;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.PriorityQueue;
@@ -26,12 +25,13 @@ class Solution {
         PriorityQueue<NumFreq> pq = new PriorityQueue<>((a,b)-> (b.frequency-a.frequency));
 
         for(int i= 0; i<nums.length; i++){
-            map.computeIfAbsent(nums[i], t->1);
-            BiFunction<Integer, Integer, Integer> plusOne = (currentIndex, currentValue)->{
-                return currentValue+1;
-            };
-            map.computeIfPresent(nums[i], plusOne);
+            map.computeIfPresent(nums[i], (currentIndex, currentValue)-> currentValue+1);
+            map.putIfAbsent(nums[i], 1);
         }
+//Could do this instead
+//        for (int num : nums) {
+//            map.put(num, frequencyMap.getOrDefault(num, 0) + 1);
+//        }
 
         for(Integer key:map.keySet()){
             NumFreq numFreq = new NumFreq(key, map.get(key));
