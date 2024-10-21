@@ -1,4 +1,4 @@
-package Mine2024.RottenOranges;
+package Mine2024.graph.RottenOranges;
 
 public class Cell {
 
